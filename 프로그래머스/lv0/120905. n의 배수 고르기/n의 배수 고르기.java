@@ -12,8 +12,7 @@ class Solution {
         for(int i=0; i< numlist.length; i++){
             if(numlist[i] % n == 0){
                 answer[j] = numlist[i];
-                j++;
-                
+                j++;   
             }
         }
         
