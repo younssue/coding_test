@@ -12,8 +12,8 @@ class Solution {
             }
         }
 
-        String[] result =  list.toArray(new String[list.size()]);
-        
+        String[] result =  new String[list.size()];
+        list.toArray(result);
         Arrays.sort(result);
         
         
