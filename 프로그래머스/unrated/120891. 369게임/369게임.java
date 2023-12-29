@@ -5,17 +5,17 @@ class Solution {
         String[] arr = orderStr.split("");
         
         for(int i=0;i<arr.length; i++){
-            if(arr[i].contains("3")){
+            if(arr[i].contains("3") || arr[i].contains("6") || arr[i].contains("9")){
                 answer++;
             }
             
-            if(arr[i].contains("6")){
-                answer++;
-            }
+//             if(arr[i].contains("6")){
+//                 answer++;
+//             }
             
-            if(arr[i].contains("9")){
-                answer++;
-            }
+//             if(arr[i].contains("9")){
+//                 answer++;
+//             }
         }
         return answer;
     }
