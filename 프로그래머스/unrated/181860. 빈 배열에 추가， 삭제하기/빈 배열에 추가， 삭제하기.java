@@ -11,7 +11,7 @@ class Solution {
                     answer.add(arr[i]);
                 }
             } else {
-                int size = answer.size();
+              int size = answer.size();
                 if (size >= arr[i]) {
                     for (int j = 0; j < arr[i]; j++) {
                         answer.remove(size - 1 - j);
