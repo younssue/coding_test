@@ -1,3 +1,8 @@
+import sys
+
+input = sys.stdin.readline
+
+
 N = int(input())
 
 stick_list = []
