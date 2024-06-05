@@ -2,21 +2,22 @@ import sys
 
 input = sys.stdin.readline
 
+n = int(input())
+stack = []
 
-N = int(input())
+for _ in range(n):
+    stack.append(int(input()))
 
-stick_list = []
-for _ in range(N):
-    char = int(input())
-    stick_list.append(char)
+# stack[-1]: 가장 마지막 값
+last = stack[-1]
+count = 1
 
+# 역으로 for문
+# reversed 함수: 메모리 용량에서 이점
+# set ( 순서개념이 없는 ) 사용 불가
+for i in reversed(range(n)):
+    if stack[i] > last:
+        count += 1
+        last = stack[i]
 
-stick_cnt = 0
-max_stick = 0
-
-# 오른쪽부터 왼쪽까지 탐색
-for i in range(N-1, -1, -1):
-    if stick_list[i] > max_stick:
-        stick_cnt += 1
-        max_stick = stick_list[i]
-print(stick_cnt)
+print(count)
