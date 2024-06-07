@@ -9,5 +9,10 @@ for _ in range(T):
     for _ in range(N):
         key, value = input().split()
         school[key] = int(value)
-    dict_school = dict(zip(school.values(), school.keys()))
-    print(dict_school[max(dict_school)])
+
+    max_school = max(school.values())
+
+    for key,value in school.items():
+        if value == max_school:
+            print(key)
+            break
