@@ -1,20 +1,20 @@
 import sys
 from itertools import permutations
-
+input = sys.stdin.readline
 
 n = int(input())
 k = int(input())
 
-cards = []
+card_list = []
 for _ in range(n):
-    card = sys.stdin.readline().strip()
-    cards.append(card)
+    card =input().strip()
+    card_list.append(card)
 
 # set을 사용해 중복 제거
-unique_permutations = set()
-for perm in permutations(cards, k):
-    permutation_string = "".join(perm)
-    unique_permutations.add(permutation_string)
+unique = set()
+for i in permutations(card_list, k):
+    str = "".join(i)
+    unique.add(str)
 
 
-print(len(unique_permutations))
+print(len(unique))
