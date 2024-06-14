@@ -11,5 +11,5 @@ for i in milk_list:
     if i == milk_num:
         count += 1
         milk_num += 1
-        continue
+        
 print(count)
